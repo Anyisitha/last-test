@@ -9,15 +9,15 @@ function AppTest({count}) {
   const [showFinalResult, setShowFinalResult] = useState(false)
   const [score, setScore] = useState(0)
   const [currentQuestion, setCurrentQuestion] = useState(0)
-     const [acount, setAcount] = useState(0)
+  const [acount, setAcount] = useState(0)
 
 
   const questions = [
     {
       text: "¿Realizas ejercicio frecuentemente? (mínimo 150 min de actividad física a la semana)",
       options: [
-        { id: 2, text: "No", isCorrect: false },
-        { id: 3, text: "Si", isCorrect: true },
+        { id: 2, text: "Si", isCorrect: true },
+        { id: 3, text: "No", isCorrect: false },
       ],
     },
     {
@@ -37,56 +37,56 @@ function AppTest({count}) {
     {
       text: "¿Presentas tos seca?",
       options: [
-        { id: 0, text: "Si", isCorrect: false },
-        { id: 1, text: "No", isCorrect: true },
+        { id: 0, text: "Si", isCorrect: true },
+        { id: 1, text: "No", isCorrect: false },
        
       ],
     },
     {
       text: "¿ Tu peso corporal aumenta de manera anormal en cuestión de días o semanas aun sin haber hecho cambios en tus hábitos alimenticios o de ejercicio?",
       options: [
-        { id: 0, text: "Si", isCorrect: false },
-        { id: 1, text: "No", isCorrect: true },
+        { id: 0, text: "Si", isCorrect: true },
+        { id: 1, text: "No", isCorrect: false },
       ],
     },
     {
       text: "¿ Tus pies, tobillos o piernas se inflaman frecuentemente?",
       options: [
-        { id: 0, text: "Si", isCorrect: false },
-        { id: 1, text: "No", isCorrect: true },
+        { id: 0, text: "Si", isCorrect: true },
+        { id: 1, text: "No", isCorrect: false },
       ],
     },
     {
       text: "¿Percibes que los latidos de tu corazón son más rápidos de lo normal? ",
       options: [
-        { id: 0, text: "Si", isCorrect: false },
-        { id: 1, text: "No", isCorrect: true },
+        { id: 0, text: "Si", isCorrect: true },
+        { id: 1, text: "No", isCorrect:false },
       ],
     },
     {
       text: "¿ Tus padres, hermanos o abuelos presentan alguna de estas enfermedades: falla cardíaca, infarto, hipertensión, enfermedad renal o diabetes? ",
       options: [
-        { id: 0, text: "Si", isCorrect: false },
-        { id: 1, text: "No", isCorrect: true },
+        { id: 0, text: "Si", isCorrect: true },
+        { id: 1, text: "No", isCorrect: false },
       ],
     },
     {
       text: " ¿Eres o has sido consumidor activo de tabaco? ",
       options: [
-        { id: 0, text: "Si", isCorrect: false },
-        { id: 1, text: "No", isCorrect: true },
+        { id: 0, text: "Si", isCorrect: true },
+        { id: 1, text: "No", isCorrect: false },
       ],
     },
     {
       text: " ¿Sientes que te falta el aire al agacharte o amarrarte los zapatos? ",
       options: [
-        { id: 0, text: "Si", isCorrect: false },
-        { id: 1, text: "No", isCorrect: true },
+        { id: 0, text: "Si", isCorrect: true },
+        { id: 1, text: "No", isCorrect: false },
       ],
     },
   ];
 
- 
+  
 
   const  optionClicked = (isCorrect) => {
     console.log(isCorrect)
@@ -122,7 +122,7 @@ function AppTest({count}) {
   
 
   return (
-    <div className="App">
+    <div className="App animate__animated animate__fadeIn">
    
      
      { showFinalResult 
@@ -137,7 +137,7 @@ function AppTest({count}) {
 
      :  <CardQuestion 
      
-     currentQuestion={currentQuestion}
+      currentQuestion={currentQuestion}
       questions={questions}
      
       setShowFinalResult={setShowFinalResult}

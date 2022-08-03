@@ -5,7 +5,8 @@ import { InfoStart } from './InfoStart'
 
 export const InfoCover = () => {
 
-  const [showSatrt, setShowSatrt] = useState(false)
+
+const [showSatrt, setShowSatrt] = useState(false)
 
 
   return (
@@ -14,7 +15,7 @@ export const InfoCover = () => {
   {
     showSatrt === true && <InfoStart/>
   }
-        <div className={ ` ${ showSatrt === false ? 'AppInfo2' : 'hide'  }` }>
+        <div className={ `${ showSatrt === false ? 'AppInfo2 animate__animated animate__fadeIn ' : 'hide'  }` }>
         <div className="table">
             <div className="text_cover_info"></div>
             <div className="text_cover_info2"></div>

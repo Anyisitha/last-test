@@ -13,9 +13,9 @@ const [back, setBack] = useState(false)
       startQuiz === true && <AppTest/>
     }
       {
-      back === true && <InfoCover/> 
+      back === true && <InfoCover /> 
     }
-       <div className={ ` ${startQuiz === false ? 'AppInfo' : 'hide'  || back === true ? 'hide' : 'AppInfo' } ` } >
+       <div className={ ` ${startQuiz === false ? 'AppInfo' : 'hide'  } ` } >
         <div className="table2">
         <div className="text_cover_start"></div>
         </div>

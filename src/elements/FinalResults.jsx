@@ -1,25 +1,44 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
+import { CondicionOne } from './CondicionOne'
+import { CondicionalTwo } from './CondicionalTwo'
+import { Loading } from './Loading'
 
 export const FinalResults = ({questions, score, restarGame,acount}) => {
+const [validar, setValidar] = useState(false)
 
+  useEffect(() => {
+   
+    setTimeout(() => {
+      
+    console.log('cargando')
 
+    setValidar(true)
+      
+    },9000 );
 
-
+  }, [])
+  
   
   return (
     <div>
+     {
+        <div className={validar === true ? 'hide' : null } ><Loading/></div>
+     }
 
         {
-          acount - 1 >=  2 && alert('lo conseguiste') 
+          acount - 1 >=  2 && <CondicionOne  restarGame={ restarGame} />
         }
 
         {
-          acount - 1 <= 1 && alert('debes mejorar') 
+          acount - 1 <= 1 && <CondicionalTwo restarGame={ restarGame} />
         }
 
-        <div className="final-results">
+      
+{/* final-results */}
+{/* acount - 1 <= 1 ? 'hide' : 'hide' */}
+        <div className={  validar === true ? 'hide' : 'hide' }>
         <h1>{ acount - 1 }</h1>
-          <h1>Final Results</h1>
+          {/* <h1>Final Results</h1> */}
           <h2> 
           {score} out of {questions.length} correct - (
             {(score / questions.length) * 100}%)
