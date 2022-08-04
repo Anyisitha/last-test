@@ -9,7 +9,8 @@ export const Final = ({ restarGame}) => {
    <div className="end animate__animated animate__fadeIn">
         <div className="final-table">
           <div className="content-end">
-             <div className='repetir' onClick={()=> restarGame()}></div>
+             {/* <div className='repetir' onClick={()=> restarGame()}></div> */}
+             <a className='repetir' href="./"></a>
              <a href="https://web-sospechar-para-todos.sospecharnofalla.com/contenido-para-todos/diagnostico#section-clasificacion" className="close" ></a>
           </div>  
         </div>

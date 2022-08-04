@@ -48,7 +48,7 @@ export const CardQuestion = ({currentQuestion, questions, optionClicked,setShowF
           {
            questions[currentQuestion].options.map((option)=> {
              return (
-               <li onClick={ ()=> optionClicked(option.isCorrect)  }  key={option.id} >{option.text}</li>
+               <li onClick={ ()=> optionClicked(option.isCorrect)}  key={option.id} >{option.text}</li>
              )
            })
           }

@@ -17,20 +17,23 @@ const [validar, setValidar] = useState(false)
     },9000 );
 
   }, [])
+
+  console.log(acount)
   
   
   return (
+
     <div>
      {
         <div className={validar === true ? 'hide' : null } ><Loading/></div>
      }
 
         {
-          acount - 1 >=  2 && <CondicionOne  restarGame={ restarGame} />
+          acount  >=  2 && <CondicionOne  restarGame={ restarGame} />
         }
 
         {
-          acount - 1 <= 1 && <CondicionalTwo restarGame={ restarGame} />
+          acount  <= 1 && <CondicionalTwo restarGame={ restarGame} />
         }
 
       

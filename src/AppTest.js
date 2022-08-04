@@ -94,7 +94,6 @@ function AppTest({count}) {
           setScore( + 1)
           setAcount(acount + 1)
           console.log(acount)
-        
          
       }
 
@@ -102,13 +101,10 @@ function AppTest({count}) {
       if ( currentQuestion + 1 < questions.length ) {
          setCurrentQuestion( currentQuestion + 1 )
 
-       
-
       }else {
        
            setShowFinalResult(true)
-           
-            
+                 
       } 
   }
 
@@ -119,7 +115,6 @@ function AppTest({count}) {
     setShowFinalResult(false)
   }
 
-  
 
   return (
     <div className="App animate__animated animate__fadeIn">
@@ -131,8 +126,6 @@ function AppTest({count}) {
        score={ score } 
        restarGame={restarGame} 
        acount={acount}
-    
-      
        />
 
      :  <CardQuestion 
@@ -147,7 +140,6 @@ function AppTest({count}) {
      
      />
       
-    
      }
  <div className={ `${ currentQuestion === 0 && 'personaje' || currentQuestion === 1 && 'personaje2' || currentQuestion === 2 && 'personaje3'  || currentQuestion === 3 && 'personaje4'  || currentQuestion === 4 && 'personaje5'  || currentQuestion === 5 && 'personaje6'  || currentQuestion === 6 && 'personaje7'  || currentQuestion === 7 && 'personaje8'  || currentQuestion === 8 && 'personaje9'  || currentQuestion === 9 && 'personaje10' }` }></div>
     </div>
