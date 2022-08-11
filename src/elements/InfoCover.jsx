@@ -4,7 +4,7 @@ import { InfoStart } from './InfoStart'
 
 
 export const InfoCover = () => {
-
+    
 
 const [showSatrt, setShowSatrt] = useState(false)
 
